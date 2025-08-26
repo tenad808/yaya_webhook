@@ -4,13 +4,13 @@ A Django-based webhook endpoint for receiving and processing YaYa Wallet transac
 
 ## Features
 
-- ✅ Receives webhook POST requests with JSON payload
-- ✅ Verifies YAYA-SIGNATURE header for security
-- ✅ Handles replay attacks with timestamp validation
-- ✅ Validates payload structure
-- ✅ Prevents duplicate transaction processing
-- ✅ Returns 2xx response immediately before processing
-- ✅ Comprehensive test suite
+- Receives webhook POST requests with JSON payload
+- Verifies YAYA-SIGNATURE header for security
+- Handles replay attacks with timestamp validation
+- Validates payload structure
+- Prevents duplicate transaction processing
+- Returns 2xx response immediately before processing
+- Comprehensive test suite
 
 ## Setup Instructions
 
