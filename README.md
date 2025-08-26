@@ -16,7 +16,7 @@ A Django-based webhook endpoint for receiving and processing YaYa Wallet transac
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/tenad808/yaya_webhook.git
    cd yaya_webhook
 Install dependencies
 
