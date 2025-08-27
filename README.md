@@ -18,7 +18,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 - PostgreSQL (recommended) or SQLite
 - python-decouple for environment variable management
 
-**Project Structure**
+## Project Structure
     ```bash
       yaya_webhook/
       ├── manage.py
