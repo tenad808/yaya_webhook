@@ -156,6 +156,8 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
           print('Body (raw JSON):')
           print(json.dumps(payload, indent=2))
           "
+
+          
           ###### Expected test output shows:
           # === POSTMAN SETTINGS ===
           # URL: POST http://127.0.0.1:8000/webhook/yaya/   
@@ -197,6 +199,30 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
           "invoice_url": "https://yayawallet.com/en/invoice/xxxx"
       }
 
-
+## API Endpoint
+### Webhook URL
+    POST /webhook/yaya/
+### Request Headers
+    Content-Type: application/json
+    YAYA-SIGNATURE: t={timestamp},signature={hmac_signature}
+### Request Body
+    {
+        "id": "string (UUID)",
+        "amount": "number",
+        "currency": "string (3 chars)",
+        "created_at_time": "number (timestamp)",
+        "timestamp": "number (timestamp)", 
+        "cause": "string",
+        "full_name": "string",
+        "account_name": "string",
+        "invoice_url": "string (URL)"
+      }
+### Response Codes
+    - Webhook processed successfully
+    # {"status": "success"} or {"status": "already_processed"}
+    - Invalid JSON or missing signature header
+    # {"error": "Missing required field: id"} or {"error": "Invalid signature"}
+    - Duplicate transaction (replay attack detected)
+    # {"error": "Timestamp outside tolerance window - possible replay attack"}
 
        
