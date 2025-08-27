@@ -156,7 +156,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
           print('Body (raw JSON):')
           print(json.dumps(payload, indent=2))
           "
-          # The output like
+          ###### Expected test output shows:
           # === POSTMAN SETTINGS ===
           # URL: POST http://127.0.0.1:8000/webhook/yaya/   
           # Headers:
