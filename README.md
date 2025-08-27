@@ -114,7 +114,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 
 2. **Manual Testing**
 
-Option 1: **Using generate_signature.py**
+#### Option 1: Using generate_signature.py
           ```bash
              python generate_signature.py
        
