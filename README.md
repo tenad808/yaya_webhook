@@ -114,19 +114,18 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 
 2. **Manual Testing**
 
-    **Option 1: Using generate_signature.py**
+      **Option 1: Using generate_signature.py**
+          ```bash
+             python generate_signature.py
+      **Option 1: Generate test signature and payload using Sell or terminal**
       ```bash
-         python generate_signature.py
-**Option 1: Generate test signature and payload using Sell or terminal**
-    ```bash
-        # Run this code on power shell or visual studio terminal on the project path
-        python manage.py shell -c "
+         # Run this code on power shell or visual studio terminal on the project path
+         python manage.py shell -c "
           import hmac
           import hashlib
           import time
           import json
           from django.conf import settings
-
           # Test payload
           payload = {
               'id': 'test-' + str(int(time.time())),
@@ -139,11 +138,11 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
               'account_name': 'abebekebede1',
               'invoice_url': 'https://yayawallet.com/en/invoice/xxxx'
           }
-
+      
           # Get webhook secret and current timestamp
           secret = settings.WEBHOOK_SECRET
           current_timestamp = int(time.time())
-
+      
           # Generate signature
           signed_payload = ''.join(str(value) for value in payload.values())
           signature = hmac.new(
@@ -151,7 +150,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
               signed_payload.encode('utf-8'),
               hashlib.sha256
           ).hexdigest()
-
+      
           print('=== POSTMAN SETTINGS ===')
           print('URL: POST http://127.0.0.1:8000/webhook/yaya/')
           print('Headers:')
