@@ -60,28 +60,28 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
       # WEBHOOK_TOLERANCE=300
       # ALLOWED_HOSTS=localhost,127.0.0.1
 5. **Configure Database**
-  ```bash
-    # Go to the path yaya_webhook/settings.py
-    # For PostgreSQL (recommended):
-    DATABASES = {
-          'default': {
-              'ENGINE': 'django.db.backends.postgresql',
-              'NAME': 'yaya_webhook', # or your database name
-              'USER': 'postgres',     # or your database username
-              'PASSWORD': 'root',     # or your database password
-              'HOST': 'localhost',
-              'PORT': '5432',
-          }
-      }
-    # Or for SQLite (development):
-      DATABASES = {
-          'default': {
-              'ENGINE': 'django.db.backends.sqlite3',
-              'NAME': BASE_DIR / 'db.sqlite3',
-          }
-      }
+        ```bash
+          # Go to the path yaya_webhook/settings.py
+          # For PostgreSQL (recommended):
+          DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': 'yaya_webhook', # or your database name
+                    'USER': 'postgres',     # or your database username
+                    'PASSWORD': 'root',     # or your database password
+                    'HOST': 'localhost',
+                    'PORT': '5432',
+                }
+            }
+          # Or for SQLite (development):
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
+                }
+            }
 
-6. **Run migrations**
+   6. **Run migrations**
    ```bash
       python manage.py makemigrations
       python manage.py migrate
