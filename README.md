@@ -19,7 +19,6 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 - python-decouple for environment variable management
 
 ## Project Structure
-    ```bash
       yaya_webhook/
       ├── manage.py
       ├── requirements.txt
