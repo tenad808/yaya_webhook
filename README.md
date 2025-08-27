@@ -181,6 +181,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 
  4. **Postman Testing Setup**
     **Use the generated output in Postman**
+    
     **Request Configuration:** 
        - **Method**: POST
        - **URL**: http://127.0.0.1:8000/webhook/yaya/
