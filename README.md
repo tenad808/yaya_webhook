@@ -22,8 +22,8 @@ This solution implements a secure webhook endpoint for processing YaYa Wallet tr
 6. Documentation: Created detailed setup and usage instructions
 #### Assumptions Made
 1. Timestamp Handling:
-      - created_at_time represents original transaction creation (can be historical)
-      - timestamp represents webhook delivery time (must be current)
+      - created_at_time represents original transaction creation 
+      - timestamp represents webhook delivery time 
       - 5-minute tolerance window for timestamp validation
 2. Security:
       - Webhook secret is stored securely in environment variables
