@@ -1,8 +1,8 @@
 # YaYa Wallet Webhook Integration
+## 📋 Project Overview
+This solution implements a secure webhook endpoint for processing YaYa Wallet transaction notifications, following the guidelines provided in the YaYa Wallet documentation. The implementation is built using Django and Python, featuring robust security measures including HMAC signature verification, replay attack protection, and comprehensive error handling.
 
-A Django-based webhook endpoint for processing YaYa Wallet transaction notifications with robust security features including signature verification, replay attack prevention, and timestamp validation.
-
-## 🚀 Features
+## 🚀 Features and Solution Works as Expected
 
 - **Secure Webhook Processing**: HMAC-SHA256 signature verification and verifies YAYA-SIGNATURE header for security
 - **Replay Attack Protection**: Timestamp tolerance checking and duplicate transaction detection
@@ -10,6 +10,34 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 - **Quick Response**: Returns 2xx immediately before processing
 - **Comprehensive Testing**: Full test suite covering all security scenarios
 - **Database Logging**: Stores all webhook transactions for auditing and debugging
+
+## Technical Implementation
+
+#### Problem-Solving Approach
+1. Requirements Analysis: Studied YaYa Wallet webhook documentation thoroughly
+2. Security First: Prioritized signature verification and replay protection
+3. Modular Design: Separated concerns into models, views, utils, and tests
+4. Error Handling: Implemented comprehensive validation and error responses
+5. Testing: Built complete test suite before final implementation
+6. Documentation: Created detailed setup and usage instructions
+#### Assumptions Made
+1. Timestamp Handling:
+      - created_at_time represents original transaction creation (can be historical)
+      - timestamp represents webhook delivery time (must be current)
+      - 5-minute tolerance window for timestamp validation
+2. Security:
+      - Webhook secret is stored securely in environment variables
+      - HMAC-SHA256 is used for signature verification
+      - Constant-time comparison to prevent timing attacks
+3. Data Validation:
+      - All required fields must be present in payload
+      - Numeric fields validated as numbers
+      - String fields validated for presence and type
+4. Async Processing:
+      - Immediate 2xx response returned before processing
+      - Background processing happens after response delivery
+
+## 🚀 Quick Start
 
 ## 📋 Prerequisites
 
