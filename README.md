@@ -257,5 +257,22 @@ This solution implements a secure webhook endpoint for processing YaYa Wallet tr
     # {"error": "Invalid JSON"} or {"error": "Invalid signature"}
     409 - Duplicate transaction (replay attack detected)
     # {"error": "Transaction already processed"}
+## 📝 Implementation Notes
+Challenges Solved:
+Signature Verification: Implemented proper HMAC-SHA256 with constant-time comparison
 
+Timestamp Handling: Managed both historical and current timestamps appropriately
+
+Error Handling: Comprehensive validation without exposing internal details
+
+Testing: Covered all edge cases including security scenarios
+
+Design Decisions:
+Django Framework: Chosen for rapid development and security features
+
+Modular Structure: Separated concerns for maintainability
+
+Environment Configuration: Used python-decouple for secure configuration
+
+Testing First: Built comprehensive tests before final implementation
        
