@@ -187,8 +187,10 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
     
     **Headers:**
         `Content-Type:` `application/json`
+    
         `YAYA-SIGNATURE:` `[generated_signature]`
-      **Body (raw JSON):**
+    
+     **Body (raw JSON):**
         ```bash
         {
           "id": "test-1234567890",
