@@ -92,8 +92,8 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 
 ## Testing
 
-### 1. Unit Tests
-```bash
+### 1. **Unit Tests**
+    ```bash
         # Run all tests
         python manage.py test
 
@@ -112,7 +112,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
         # OK
         # Destroying test database for alias 'default'...
 
-### 2. Manual Testing
+### 2. **Manual Testing**
    #### Option 1: Using generate_signature.py
          python generate_signature.py
              
