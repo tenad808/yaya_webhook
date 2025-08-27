@@ -51,7 +51,6 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
       pip install -r requirements.txt
 
 3. **Configure environment variables**
-   ```bash
       cp .env.example .env
       # Edit .env with your settings
       # DEBUG=True
