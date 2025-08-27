@@ -97,9 +97,9 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
       # Run all tests
       python manage.py test
 
-      # Expected test output shows:
-      # Found 5 test(s).
-      # Creating test database for alias 'default'...
+        # Expected test output shows:
+        # Found 5 test(s).
+        # Creating test database for alias 'default'...
         # System check identified no issues (0 silenced).
         # Signature verification failed: Timestamp outside tolerance   <-- expected for expired timestamp test
         # .Invalid JSON payload                                        <-- expected for invalid JSON test
@@ -112,11 +112,12 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
         # OK
         # Destroying test database for alias 'default'...
 
-### 2. **Manual Testing**
-   #### Option 1: Using generate_signature.py
-         python generate_signature.py
+2. **Manual Testing**
+   ```bash
+       #Option 1: Using generate_signature.py
+       python generate_signature.py
              
-   #### Option 2: Generate test signature and payload using shell or terminal
+       #Option 2: Generate test signature and payload using shell or terminal
          # Run this code on power shell or visual studio terminal on the project path
          python manage.py shell -c "
           import hmac
@@ -177,8 +178,8 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
             # "account_name": "abebekebede1",
             # "invoice_url": "https://yayawallet.com/en/invoice/xxxx"
           # }
-          
-### 4. Postman Testing Setup
+
+ 4. **Postman Testing Setup**
    ##### Use the generated output in Postman
    ###### Request Configuration: 
        - **Method**: POST
