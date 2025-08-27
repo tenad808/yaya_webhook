@@ -51,6 +51,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
       pip install -r requirements.txt
 
 3. **Configure environment variables**
+   ```bash
       cp .env.example .env
       # Edit .env with your settings
       # DEBUG=True
@@ -58,34 +59,34 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
       # WEBHOOK_SECRET=your-yaya-webhook-secret
       # WEBHOOK_TOLERANCE=300
       # ALLOWED_HOSTS=localhost,127.0.0.1
-4. **Configure Database**
-        ```bash
-          # Go to the path yaya_webhook/settings.py
-          # For PostgreSQL (recommended):
-          DATABASES = {
-                'default': {
-                    'ENGINE': 'django.db.backends.postgresql',
-                    'NAME': 'yaya_webhook', # or your database name
-                    'USER': 'postgres',     # or your database username
-                    'PASSWORD': 'root',     # or your database password
-                    'HOST': 'localhost',
-                    'PORT': '5432',
-                }
-            }
-          # Or for SQLite (development):
-            DATABASES = {
-                'default': {
-                    'ENGINE': 'django.db.backends.sqlite3',
-                    'NAME': BASE_DIR / 'db.sqlite3',
-                }
-            }
+5. **Configure Database**
+  ```bash
+    # Go to the path yaya_webhook/settings.py
+    # For PostgreSQL (recommended):
+    DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.postgresql',
+              'NAME': 'yaya_webhook', # or your database name
+              'USER': 'postgres',     # or your database username
+              'PASSWORD': 'root',     # or your database password
+              'HOST': 'localhost',
+              'PORT': '5432',
+          }
+      }
+    # Or for SQLite (development):
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.sqlite3',
+              'NAME': BASE_DIR / 'db.sqlite3',
+          }
+      }
 
-5. **Run migrations**
+6. **Run migrations**
    ```bash
       python manage.py makemigrations
       python manage.py migrate
 
-6. **Start the development server**
+7. **Start the development server**
    ```bash
       python manage.py runserver
 
