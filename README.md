@@ -113,11 +113,12 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
         # Destroying test database for alias 'default'...
 
 2. **Manual Testing**
+   
 **Option 1: Using generate_signature.py**
-   ```bash
-      python generate_signature.py
+    ```bash
+       python generate_signature.py
 
-**Option 2: Generate test signature and payload using Sell or terminal**
+**Option 2: Generate test signature and payload using shell or terminal**
    ```bash
          # Run this code on power shell or visual studio terminal on the project path
          python manage.py shell -c "
