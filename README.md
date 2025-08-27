@@ -262,10 +262,9 @@ This solution implements a secure webhook endpoint for processing YaYa Wallet tr
 1. Signature Verification: Implemented proper HMAC-SHA256 with constant-time comparison
 2. Timestamp Handling: Managed both historical and current timestamps appropriately
 3. Error Handling: Comprehensive validation without exposing internal details
-4. Testing: Covered all edge cases including security scenarios
+4. Testing: Built comprehensive tests and cases including security scenarios
 #### Design Decisions:
 1. Django Framework: Chosen for rapid development and security features
 2. Modular Structure: Separated concerns for maintainability
 3. Environment Configuration: Used python-decouple for secure configuration
-4. Testing First: Built comprehensive tests before final implementation
        
