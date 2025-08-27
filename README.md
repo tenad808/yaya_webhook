@@ -186,12 +186,11 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
        - **URL**: http://127.0.0.1:8000/webhook/yaya/
     
     **Headers:**
-        `Content-Type:` `application/json`
-    
+        `Content-Type:` `application/json` and
         `YAYA-SIGNATURE:` `[generated_signature]`
     
-     **Body (raw JSON):**
-        ```bash
+    **Body (raw JSON):**
+    ```bash
         {
           "id": "test-1234567890",
           "amount": 100,
