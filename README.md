@@ -223,11 +223,11 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
         "invoice_url": "string (URL)"
       }
 ### Response Codes
-    - Webhook processed successfully
-    # {"status": "success"} or {"status": "already_processed"}
-    - Invalid JSON or missing signature header
-    # {"error": "Missing required field: id"} or {"error": "Invalid signature"}
-    - Duplicate transaction (replay attack detected)
-    # {"error": "Timestamp outside tolerance window - possible replay attack"}
+    200 - Webhook processed successfully
+    # {"status": "success"}
+    400 - Invalid JSON or missing signature header
+    # {"error": "Invalid JSON"} or {"error": "Invalid signature"}
+    409 - Duplicate transaction (replay attack detected)
+    # {"error": "Transaction already processed"}
 
        
