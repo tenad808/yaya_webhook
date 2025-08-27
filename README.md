@@ -93,6 +93,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 ## Testing
 
 ### 1. Unit Tests
+```bash
         # Run all tests
         python manage.py test
 
