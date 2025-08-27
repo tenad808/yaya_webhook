@@ -92,14 +92,14 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 
 ## Testing
 
-### 1. **Unit Tests**
-    ```bash
-        # Run all tests
-        python manage.py test
+1. **Unit Tests**
+   ```bash
+      # Run all tests
+      python manage.py test
 
-        # Expected test output shows:
-        # Found 5 test(s).
-        # Creating test database for alias 'default'...
+      # Expected test output shows:
+      # Found 5 test(s).
+      # Creating test database for alias 'default'...
         # System check identified no issues (0 silenced).
         # Signature verification failed: Timestamp outside tolerance   <-- expected for expired timestamp test
         # .Invalid JSON payload                                        <-- expected for invalid JSON test
