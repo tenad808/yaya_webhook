@@ -92,7 +92,7 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
 
 ## Testing
 
-### Unit Tests
+### 1. Unit Tests
         # Run all tests
         python manage.py test
 
@@ -111,9 +111,9 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
         # OK
         # Destroying test database for alias 'default'...
 
-### Manual Testing
+### 2. Manual Testing
    #### Option 1: Using generate_signature.py
-               python generate_signature.py
+         python generate_signature.py
              
    #### Option 2: Generate test signature and payload using shell or terminal
          # Run this code on power shell or visual studio terminal on the project path
@@ -175,15 +175,15 @@ A Django-based webhook endpoint for processing YaYa Wallet transaction notificat
             # "invoice_url": "https://yayawallet.com/en/invoice/xxxx"
           # }
           
-4. **Postman Testing Setup**
-      ## Use the generated output in Postman
-      ### Request Configuration: 
+### 4. Postman Testing Setup
+   ##### Use the generated output in Postman
+   ###### Request Configuration: 
        - **Method**: POST
        - **URL**: http://127.0.0.1:8000/webhook/yaya/
-      ### Headers:
+   ###### Headers:
         `Content-Type:` `application/json`
         `YAYA-SIGNATURE:` `[generated_signature]`
-      ### Body (raw JSON):
+   ###### Body (raw JSON):
         ```json
         {
           "id": "test-1234567890",
